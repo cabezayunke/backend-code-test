@@ -1,3 +1,4 @@
+
 import CreateGeniallyService from "../../../../../src/contexts/core/genially/application/CreateGeniallyService";
 import GeniallyName from "../../../../../src/contexts/core/genially/domain/values/GeniallyName";
 import GeniallyDescription from "../../../../../src/contexts/core/genially/domain/values/GeniallyDescription";
@@ -7,8 +8,18 @@ import GeniallyRepository from "../../../../../src/contexts/core/genially/domain
 
 describe('CreateGeniallyService', () => {
     const saveFn = jest.fn();
-    const repository = { save: saveFn, find: jest.fn(), delete: jest.fn() } as GeniallyRepository;
+    const repository = {
+        save: saveFn,
+        find: jest.fn(),
+        delete: jest.fn()
+    } as GeniallyRepository;
     const helper = new GeniallyTestHelper();
+    const service = new CreateGeniallyService(repository)
+    const data = {
+        id: new Uuid(),
+        name: new GeniallyName("valid name"),
+        description: new GeniallyDescription("valid description"),
+    };
 
     beforeEach(async () => {
         saveFn.mockClear();
@@ -16,12 +27,6 @@ describe('CreateGeniallyService', () => {
 
     test('should create a valid genially with all fields', async () => {
         // arrange
-        const service = new CreateGeniallyService(repository)
-        const data = {
-            id: new Uuid(),
-            name: new GeniallyName("valid name"),
-            description: new GeniallyDescription("valid description"),
-        };
 
         // act
         const genially = await service.execute(data);
@@ -33,10 +38,13 @@ describe('CreateGeniallyService', () => {
 
     test('should handle error from repository', async () => {
         // arrange
+        const error = 'infrastructure error';
+        saveFn.mockImplementation(() => {
+            throw new Error(error)
+        });
 
-        // act
-
-        // assert
+        // act & assert
+        expect(service.execute(data)).rejects.toThrow(error);
     });
     
 });

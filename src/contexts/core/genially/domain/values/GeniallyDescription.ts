@@ -1,6 +1,6 @@
 import GeniallyDescriptionInvalid from "../errors/GeniallyDescriptionInvalid";
 
-const MAX_LENGTH = 125;
+export const MAX_LENGTH = 125;
 
 export default class GeniallyDescription {
     value: string;

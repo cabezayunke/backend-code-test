@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b537aa5-32f8-4c6e-a730-2e3215d112b2" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/contexts/core/genially/domain/GeniallyNotExist.ts" afterPath="$PROJECT_DIR$/src/contexts/core/genially/domain/errors/GeniallyNotExist.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contexts/core/genially/application/CreateGeniallyService.ts" afterPath="$PROJECT_DIR$/src/contexts/core/genially/application/CreateGeniallyService.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contexts/core/genially/domain/Genially.ts" afterPath="$PROJECT_DIR$/src/contexts/core/genially/domain/Genially.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contexts/core/genially/domain/errors/GeniallyDescriptionInvalid.ts" afterPath="$PROJECT_DIR$/src/contexts/core/genially/domain/errors/GeniallyDescriptionInvalid.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contexts/core/genially/domain/events/GeniallyCreated.ts" afterPath="$PROJECT_DIR$/src/contexts/core/genially/domain/events/GeniallyCreated.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyDescription.ts" afterPath="$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyDescription.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyName.ts" afterPath="$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyName.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contexts/shared/domain/DomainEvent.ts" afterPath="$PROJECT_DIR$/src/contexts/shared/domain/DomainEvent.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/contexts/core/genially/GeniallyTestHelper.ts" afterPath="$PROJECT_DIR$/test/contexts/core/genially/GeniallyTestHelper.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/contexts/core/genially/application/CreateGeniallyService.test.ts" afterPath="$PROJECT_DIR$/test/contexts/core/genially/application/CreateGeniallyService.test.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,47 +20,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="createGeniallyController.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/controllers/createGeniallyController.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateGeniallyService.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/application/CreateGeniallyService.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CreateGeniallyService.test.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/application/CreateGeniallyService.test.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="98" lean-forward="true" selection-start-line="9" selection-start-column="98" selection-end-line="9" selection-end-column="98" />
+            <state relative-caret-position="285">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
               <folding>
-                <element signature="e#0#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Uuid.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contexts/shared/domain/Uuid.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#1#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,18 +35,20 @@
       <file leaf-file-name="GeniallyTestHelper.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/GeniallyTestHelper.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Genially.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/Genially.ts">
+      <file leaf-file-name="GeniallyDescriptionInvalid.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/errors/GeniallyDescriptionInvalid.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state relative-caret-position="0">
+              <caret line="0" column="63" lean-forward="true" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -86,29 +57,55 @@
       <file leaf-file-name="GeniallyCreated.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/events/GeniallyCreated.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AggregateRoot.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contexts/shared/domain/AggregateRoot.ts">
+      <file leaf-file-name="Uuid.test.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/contexts/shared/domain/Uuid.test.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="330">
+              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Genially.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/Genially.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-436">
+              <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DomainEvent.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contexts/shared/domain/DomainEvent.ts">
+      <file leaf-file-name="GeniallyName.test.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/domain/values/GeniallyName.test.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="23" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="-78">
+              <caret line="1" column="125" lean-forward="true" selection-start-line="1" selection-start-column="125" selection-end-line="1" selection-end-column="125" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeniallyDescription.test.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/domain/values/GeniallyDescription.test.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="127" lean-forward="true" selection-start-line="1" selection-start-column="127" selection-end-line="1" selection-end-column="127" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +113,18 @@
       <file leaf-file-name="GeniallyName.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyName.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="45">
+              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeniallyDescription.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyDescription.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -146,15 +153,23 @@
         <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/GeniallyName.ts" />
         <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/GeniallyDescription.ts" />
         <option value="$PROJECT_DIR$/src/api/controllers/createGeniallyController.ts" />
-        <option value="$PROJECT_DIR$/src/contexts/shared/domain/DomainEvent.ts" />
-        <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/events/GeniallyCreated.ts" />
         <option value="$PROJECT_DIR$/src/contexts/core/genially/application/CreateGeniallyService.ts" />
-        <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyName.ts" />
         <option value="$PROJECT_DIR$/test/contexts/core/genially/TestHelper.ts" />
-        <option value="$PROJECT_DIR$/src/contexts/shared/domain/Uuid.ts" />
-        <option value="$PROJECT_DIR$/test/contexts/core/genially/application/CreateGeniallyService.test.ts" />
         <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/Genially.ts" />
         <option value="$PROJECT_DIR$/src/contexts/shared/domain/AggregateRoot.ts" />
+        <option value="$PROJECT_DIR$/test/contexts/shared/domain/FakeAggregate.ts" />
+        <option value="$PROJECT_DIR$/src/contexts/shared/domain/DomainEvent.ts" />
+        <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/events/GeniallyCreated.ts" />
+        <option value="$PROJECT_DIR$/test/contexts/shared/domain/FakeDomainEvent.ts" />
+        <option value="$PROJECT_DIR$/test/contexts/core/genially/application/CreateGeniallyService.test.ts" />
+        <option value="$PROJECT_DIR$/src/contexts/shared/domain/Uuid.ts" />
+        <option value="$PROJECT_DIR$/test/contexts/shared/domain/AggregateRoot.test.ts" />
+        <option value="$PROJECT_DIR$/test/contexts/shared/domain/Uuid.test.ts" />
+        <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/errors/GeniallyDescriptionInvalid.ts" />
+        <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyName.ts" />
+        <option value="$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyDescription.ts" />
+        <option value="$PROJECT_DIR$/test/contexts/core/genially/domain/values/GeniallyDescription.test.ts" />
+        <option value="$PROJECT_DIR$/test/contexts/core/genially/domain/values/GeniallyName.test.ts" />
         <option value="$PROJECT_DIR$/test/contexts/core/genially/GeniallyTestHelper.ts" />
       </list>
     </option>
@@ -233,7 +248,26 @@
               <item name="contexts" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="genially" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="backend-code-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend-code-test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contexts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genially" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="backend-code-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend-code-test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contexts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genially" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="values" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="backend-code-test" type="b2602c69:ProjectViewProjectNode" />
@@ -285,6 +319,40 @@
               <item name="genially" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="backend-code-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend-code-test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contexts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genially" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="backend-code-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend-code-test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contexts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genially" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="values" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="backend-code-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend-code-test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contexts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shared" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="backend-code-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend-code-test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contexts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shared" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -309,6 +377,7 @@
       <recent name="$PROJECT_DIR$/src/contexts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/contexts/core/genially/domain/values" />
       <recent name="$PROJECT_DIR$/src/contexts/core/genially/domain" />
       <recent name="$PROJECT_DIR$/src/contexts/shared/domain" />
       <recent name="$PROJECT_DIR$/src/api/controllers" />
@@ -353,7 +422,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602400143204</updated>
-      <workItem from="1602400147573" duration="5230000" />
+      <workItem from="1602400147573" duration="8360000" />
     </task>
     <servers />
   </component>
@@ -361,9 +430,12 @@
     <history-entry file="CreateGeniallyService - 2020.10.11 at 10h 24m 03s.xml">
       <configuration name="CreateGeniallyService" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="CreateGeniallyService - 2020.10.11 at 11h 05m 36s.xml">
+      <configuration name="CreateGeniallyService" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5230000" />
+    <option name="totallyTimeSpent" value="8360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1010" extended-state="6" />
@@ -468,7 +540,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -486,7 +558,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -523,38 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/errors/GeniallyDescriptionInvalid.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="79" lean-forward="true" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyDescription.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/shared/domain/DomainEvent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="23" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/events/GeniallyCreated.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/controllers/createGeniallyController.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -562,40 +602,6 @@
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/application/CreateGeniallyService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyName.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/shared/domain/Uuid.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/Genially.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,21 +613,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/application/CreateGeniallyService.test.ts">
+    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/application/CreateGeniallyService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contexts/shared/domain/DomainEvent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/contexts/shared/domain/FakeDomainEvent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/contexts/shared/domain/FakeAggregate.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contexts/shared/domain/Uuid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/contexts/shared/domain/AggregateRoot.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+          <folding>
+            <element signature="e#1#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/contexts/shared/domain/Uuid.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/Genially.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-436">
+          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/errors/GeniallyDescriptionInvalid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="63" lean-forward="true" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/events/GeniallyCreated.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="9" column="98" lean-forward="true" selection-start-line="9" selection-start-column="98" selection-end-line="9" selection-end-column="98" />
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyName.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contexts/core/genially/domain/values/GeniallyDescription.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/application/CreateGeniallyService.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
-            <element signature="e#0#112#0" expanded="true" />
+            <element signature="e#1#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/domain/values/GeniallyDescription.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="127" lean-forward="true" selection-start-line="1" selection-start-column="127" selection-end-line="1" selection-end-column="127" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/domain/values/GeniallyName.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="1" column="125" lean-forward="true" selection-start-line="1" selection-start-column="125" selection-end-line="1" selection-end-column="125" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/contexts/core/genially/GeniallyTestHelper.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

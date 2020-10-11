@@ -1,7 +1,7 @@
 import GeniallyNameInvalid from "../errors/GeniallyNameInvalid";
 
-const MIN_LENGTH = 3;
-const MAX_LENGTH = 20;
+export const MIN_LENGTH = 3;
+export const MAX_LENGTH = 20;
 
 export default class GeniallyName {
     value: string;
