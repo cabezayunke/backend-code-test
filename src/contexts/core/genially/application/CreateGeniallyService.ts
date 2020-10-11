@@ -16,7 +16,6 @@ export default class CreateGeniallyService {
   public async execute(req: CreateGeniallyServiceRequest): Promise<Genially> {
     const { id, name, description } = req;
 
-    // constructor is now private, we have better control and better semantics with factory methods
     const genially = Genially.create(id, name, description);
 
     await this.repository.save(genially);

@@ -9,7 +9,7 @@ import Genially from "../../../../../../src/contexts/core/genially/domain/Genial
 import DbConfig from "../../../../../../src/contexts/shared/infrastructure/DbConfig";
 import GeniallyModel from "../../../../../../src/contexts/core/genially/infrastructure/GeniallyModel";
 
-describe('MongoGeniallyRepository', () => {
+describe("MongoGeniallyRepository", () => {
 
     const integrationTestHelper = new IntegrationTestHelper(
         new MongoConnectionManager(DbConfig)
@@ -26,32 +26,32 @@ describe('MongoGeniallyRepository', () => {
         await integrationTestHelper.after();
     });
 
-    test('should save new genially', async () => {
+    test("should save new genially", async () => {
         // arrange
         const genially = Genially.create(
             new Uuid(),
-            new GeniallyName('validName'),
+            new GeniallyName("validName"),
             new GeniallyDescription(),
         );
 
         // act
-        await repository.save(genially)
+        await repository.save(genially);
 
         // assert
         // the assertion here is just that it does not throw an error
 
     });
 
-    test('should save existing genially', async () => {
+    test("should save existing genially", async () => {
         // arrange
         const genially = Genially.create(
             new Uuid(),
-            new GeniallyName('validName'),
+            new GeniallyName("validName"),
             new GeniallyDescription(),
         );
         const updated = Genially.create(
             genially.id,
-            new GeniallyName('updatedName'),
+            new GeniallyName("updatedName"),
             new GeniallyDescription(),
         );
 
@@ -63,11 +63,11 @@ describe('MongoGeniallyRepository', () => {
         // the assertion here is just that it does not throw an error
     });
 
-    test('should find genially', async () => {
+    test("should find genially", async () => {
         // arrange
         const genially = Genially.create(
             new Uuid(),
-            new GeniallyName('validName'),
+            new GeniallyName("validName"),
             new GeniallyDescription(),
         );
         await repository.save(genially);
@@ -79,27 +79,27 @@ describe('MongoGeniallyRepository', () => {
         helper.assertGenially(genially, result);
     });
 
-    test('should not find genially', async () => {
+    test("should not find genially", async () => {
         // arrange
 
         // act
-        const result = await repository.find('fakeId');
+        const result = await repository.find("fakeId");
 
         // assert
         expect(result).toBe(null);
     });
 
-    test('should not delete genially', async () => {
+    test("should not delete genially", async () => {
         // arrange
         const genially = Genially.create(
             new Uuid(),
-            new GeniallyName('validName'),
+            new GeniallyName("validName"),
             new GeniallyDescription(),
         );
         await repository.save(genially);
 
         // act
-        expect(repository.delete(genially.id.value)).rejects.toThrow('You should not delete geniallys');
+        expect(repository.delete(genially.id.value)).rejects.toThrow("You should not delete geniallys");
     });
 
 });

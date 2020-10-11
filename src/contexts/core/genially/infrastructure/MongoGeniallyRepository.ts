@@ -1,6 +1,6 @@
 import Genially from "../domain/Genially";
 import GeniallyRepository from "../domain/GeniallyRepository";
-import GeniallyModel from './GeniallyModel';
+import GeniallyModel from "./GeniallyModel";
 import GeniallyMapper from "./GeniallyMapper";
 import MongoGeniallyMapper from "./MongoGeniallyMapper";
 
@@ -17,7 +17,7 @@ export default class MongoGeniallyRepository implements GeniallyRepository {
     if(existing) {
         existing.name = genially.name.value;
         existing.description = genially.description.value;
-        await existing.save()
+        await existing.save();
     } else {
         const model = this.mapper.toPersistence(genially);
         await model.save();
@@ -30,6 +30,6 @@ export default class MongoGeniallyRepository implements GeniallyRepository {
   }
 
   async delete(id: string): Promise<void> {
-    throw new Error('You should not delete geniallys');
+    throw new Error("You should not delete geniallys");
   }
 }

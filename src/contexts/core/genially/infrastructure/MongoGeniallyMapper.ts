@@ -16,7 +16,7 @@ export default class MongoGeniallyMapper implements GeniallyMapper {
             createdAt: genially.createdAt,
             modifiedAt: genially.modifiedAt,
             deletedAt: genially.deletedAt,
-        })
+        });
     }
 
     toDomain(model: GeniallyDocument): Genially {

@@ -18,8 +18,10 @@ export default class DeleteGeniallyService {
         const { id } = req;
 
         const genially = await this.finder.find(id);
-        // soft delete, no real delete
+
+        // soft delete, not a real delete
         genially.delete();
+
         // so we actually need to save, rather than delete
         await this.repository.save(genially);
 

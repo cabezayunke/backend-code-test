@@ -1,11 +1,11 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document } from "mongoose";
 
 export interface GeniallyDocument extends Document {
     uid: string;
     name: string;
     description?: string;
-    createdAt: Date,
-    updatedAt?: Date,
+    createdAt: Date;
+    updatedAt?: Date;
 }
 
 const GeniallySchema: Schema = new Schema({
@@ -26,4 +26,4 @@ const GeniallySchema: Schema = new Schema({
     updatedAt: { type: Date },
 });
 
-export default mongoose.model<GeniallyDocument>('GeniallyModel', GeniallySchema);
+export default mongoose.model<GeniallyDocument>("GeniallyModel", GeniallySchema);
