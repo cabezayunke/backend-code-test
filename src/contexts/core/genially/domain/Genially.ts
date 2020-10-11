@@ -12,12 +12,21 @@ export default class Genially extends AggregateRoot {
   private _modifiedAt: Date;
   private _deletedAt: Date;
 
-  private constructor(id: Uuid, name: GeniallyName, description: GeniallyDescription, createdAt: Date) {
+  constructor(
+      id: Uuid,
+      name: GeniallyName,
+      description: GeniallyDescription,
+      createdAt: Date,
+      modifiedAt?: Date,
+      deletedAt?: Date,
+  ) {
     super();
     this._id = id;
     this._name = name;
     this._description = description;
     this._createdAt = createdAt;
+    this._modifiedAt = modifiedAt;
+    this._deletedAt = deletedAt;
   }
 
   get id(): Uuid {
@@ -66,6 +75,11 @@ export default class Genially extends AggregateRoot {
   updateName(newName: GeniallyName) {
     this._name = newName;
     this._modifiedAt = new Date();
-    // NOTE: no one is interested in knowing when a name changes, so no event needed here
+    // NOTE: no one is interested in knowing this, so no event needed here
+  }
+
+  delete() {
+    this._deletedAt = new Date();
+      // NOTE: no one is interested in knowing this, so no event needed here
   }
 }

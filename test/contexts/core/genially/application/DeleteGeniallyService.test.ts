@@ -9,8 +9,9 @@ import Genially from "../../../../../src/contexts/core/genially/domain/Genially"
 describe("DeleteGeniallyService", () => {
     const deleteFn = jest.fn();
     const findFn = jest.fn();
+    const saveFn = jest.fn();
     const repository = {
-        save: jest.fn(),
+        save: saveFn,
         find: findFn,
         delete: deleteFn
     } as GeniallyRepository;
@@ -23,6 +24,7 @@ describe("DeleteGeniallyService", () => {
     beforeEach(async () => {
         deleteFn.mockClear();
         findFn.mockClear();
+        saveFn.mockClear();
     });
 
     test("should delete existing genially", async () => {
@@ -34,12 +36,14 @@ describe("DeleteGeniallyService", () => {
 
         // assert
         expect(id).toMatchObject(data.id);
+        expect(deleteFn).toHaveBeenCalledTimes(0);
+        expect(saveFn).toHaveBeenCalledTimes(1);
     });
 
     test("should handle error from repository", async () => {
         // arrange
         const error = "infrastructure error";
-        deleteFn.mockImplementation(() => {
+        saveFn.mockImplementation(() => {
             throw new Error(error);
         });
         findFn.mockReturnValue(fakeGenially);

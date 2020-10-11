@@ -17,8 +17,11 @@ export default class DeleteGeniallyService {
     public async execute(req: DeleteGeniallyServiceRequest): Promise<Uuid> {
         const { id } = req;
 
-        await this.finder.find(id);
-        await this.repository.delete(id.value);
+        const genially = await this.finder.find(id);
+        // soft delete, no real delete
+        genially.delete();
+        // so we actually need to save, rather than delete
+        await this.repository.save(genially);
 
         return id;
     }

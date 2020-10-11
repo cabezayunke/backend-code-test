@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  genially_mongodb_test:
+    image: mongo:4.2
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_USERNAME: geniallyUser
+      MONGO_INITDB_PASSWORD: geniallyPassword
+      MONGO_INITDB_DATABASE: geniallydb
+    ports:
+      - 27018:27017
+    volumes:
+      - ./config/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+      - genially-mongo-test-volume:/adapters/db
+    command: mongod --bind_ip_all
+
+volumes:
+  genially-mongo-test-volume:
