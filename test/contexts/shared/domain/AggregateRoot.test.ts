@@ -2,9 +2,9 @@
 import FakeAggregate from "./FakeAggregate";
 import FakeDomainEvent from "./FakeDomainEvent";
 
-describe('AggregateRoot', () => {
+describe("AggregateRoot", () => {
 
-    test('should add domain event', async () => {
+    test("should add domain event", async () => {
         // arrange
         const aggregate = new FakeAggregate();
         const fakeEvent = new FakeDomainEvent({});
@@ -18,10 +18,10 @@ describe('AggregateRoot', () => {
         expect(events[0]).toMatchObject(fakeEvent);
     });
 
-    test('pull domain event should contain the right data', async () => {
+    test("pull domain event should contain the right data", async () => {
         // arrange
         const aggregate = new FakeAggregate();
-        const eventData = {data: 'whatever'};
+        const eventData = {data: "whatever"};
         const fakeEvent = new FakeDomainEvent(eventData);
 
         // act
@@ -32,7 +32,7 @@ describe('AggregateRoot', () => {
         expect(events[0].getContents()).toMatchObject(eventData);
     });
 
-    test('should pull all domain events', async () => {
+    test("should pull all domain events", async () => {
         // arrange
         const aggregate = new FakeAggregate();
         const fakeEvent = new FakeDomainEvent({});
@@ -47,7 +47,7 @@ describe('AggregateRoot', () => {
         events.map(e => expect(e).toMatchObject(fakeEvent));
     });
 
-    test('pulling events should reset aggregate domain events', async () => {
+    test("pulling events should reset aggregate domain events", async () => {
         // arrange
         const aggregate = new FakeAggregate();
         const fakeEvent = new FakeDomainEvent({});

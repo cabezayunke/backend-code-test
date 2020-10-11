@@ -6,7 +6,7 @@ import GeniallyTestHelper from "../GeniallyTestHelper";
 import Uuid from "../../../../../src/contexts/shared/domain/Uuid";
 import GeniallyRepository from "../../../../../src/contexts/core/genially/domain/GeniallyRepository";
 
-describe('CreateGeniallyService', () => {
+describe("CreateGeniallyService", () => {
     const saveFn = jest.fn();
     const repository = {
         save: saveFn,
@@ -14,7 +14,7 @@ describe('CreateGeniallyService', () => {
         delete: jest.fn()
     } as GeniallyRepository;
     const helper = new GeniallyTestHelper();
-    const service = new CreateGeniallyService(repository)
+    const service = new CreateGeniallyService(repository);
     const data = {
         id: new Uuid(),
         name: new GeniallyName("valid name"),
@@ -25,7 +25,7 @@ describe('CreateGeniallyService', () => {
         saveFn.mockClear();
     });
 
-    test('should create a valid genially with all fields', async () => {
+    test("should create a valid genially with all fields", async () => {
         // arrange
 
         // act
@@ -36,15 +36,15 @@ describe('CreateGeniallyService', () => {
 
     });
 
-    test('should handle error from repository', async () => {
+    test("should handle error from repository", async () => {
         // arrange
-        const error = 'infrastructure error';
+        const error = "infrastructure error";
         saveFn.mockImplementation(() => {
-            throw new Error(error)
+            throw new Error(error);
         });
 
         // act & assert
-        expect(service.execute(data)).rejects.toThrow(error);
+        await expect(service.execute(data)).rejects.toThrow(error);
     });
     
 });

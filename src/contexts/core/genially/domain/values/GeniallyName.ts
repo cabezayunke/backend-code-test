@@ -13,7 +13,7 @@ export default class GeniallyName {
 
     validate(value: string) {
         if(!value || value.length < MIN_LENGTH || value.length > MAX_LENGTH) {
-            throw new GeniallyNameInvalid(value)
+            throw new GeniallyNameInvalid(value);
         }
     }
 }

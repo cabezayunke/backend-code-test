@@ -12,7 +12,7 @@ export default class GeniallyDescription {
 
     validate(value: string) {
         if(value && value.length > MAX_LENGTH) {
-            throw new GeniallyDescriptionInvalid(value)
+            throw new GeniallyDescriptionInvalid(value);
         }
     }
 }

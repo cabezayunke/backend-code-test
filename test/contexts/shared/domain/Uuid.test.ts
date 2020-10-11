@@ -2,9 +2,9 @@ import {uuid, isUuid} from "uuidv4";
 import UuidInvalid from "../../../../src/contexts/shared/domain/UuidInvalid";
 import Uuid from "../../../../src/contexts/shared/domain/Uuid";
 
-describe('Uuid value object', () => {
+describe("Uuid value object", () => {
 
-    test('should create Uuid if no value is passed', async () => {
+    test("should create Uuid if no value is passed", async () => {
         // arrange
 
         // act
@@ -15,7 +15,7 @@ describe('Uuid value object', () => {
         expect(isUuid(id.value)).toBeTruthy();
     });
 
-    test('should create Uuid with valid uuid string param', async () => {
+    test("should create Uuid with valid uuid string param", async () => {
         // arrange
         const value = uuid();
 
@@ -26,7 +26,7 @@ describe('Uuid value object', () => {
         expect(id.value).toMatch(value);
     });
 
-    test('should throw error for invalid uuid string param', async () => {
+    test("should throw error for invalid uuid string param", async () => {
         // arrange
         expect.assertions(1);
 

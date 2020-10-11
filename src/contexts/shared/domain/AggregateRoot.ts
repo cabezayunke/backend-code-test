@@ -1,4 +1,6 @@
 
+import DomainEvent from "./DomainEvent";
+
 export default abstract class AggregateRoot {
     domainEvents: DomainEvent[];
 

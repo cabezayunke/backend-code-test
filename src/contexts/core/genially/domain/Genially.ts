@@ -62,4 +62,10 @@ export default class Genially extends AggregateRoot {
       );
       return genially;
   }
+
+  updateName(newName: GeniallyName) {
+    this._name = newName;
+    this._modifiedAt = new Date();
+    // NOTE: no one is interested in knowing when a name changes, so no event needed here
+  }
 }

@@ -1,12 +1,13 @@
 import { Response, Request } from "express";
-import CreateGeniallyService from "../../contexts/core/genially/application/CreateGeniallyService";
+import CreateGeniallyService, {CreateGeniallyServiceRequest} from "../../contexts/core/genially/application/CreateGeniallyService";
 import Uuid from "../../contexts/shared/domain/Uuid";
 import GeniallyName from "../../contexts/core/genially/domain/values/GeniallyName";
 import GeniallyDescription from "../../contexts/core/genially/domain/values/GeniallyDescription";
+import GeniallyRepository from "../../contexts/core/genially/domain/GeniallyRepository";
 
-export const createGeniallyController = repository => async (req: Request, res: Response) => {
+export const createGeniallyController = (repository: GeniallyRepository) => async (req: Request, res: Response) => {
   const service = new CreateGeniallyService(repository);
-  const { id, name, description } = res.body;
+  const { id, name, description } = req.body;
   // we delegate the validation in our value objects
   // so we can reuse it in either the infrastructure our within the domain
   await service.execute({
