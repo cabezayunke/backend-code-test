@@ -5,6 +5,8 @@ import GeniallyDescription from "../../../../../../src/contexts/core/genially/do
 import GeniallyTestHelper from "../../../../../shared/GeniallyTestHelper";
 import Uuid from "../../../../../../src/contexts/shared/domain/Uuid";
 import GeniallyRepository from "../../../../../../src/contexts/core/genially/domain/GeniallyRepository";
+import GeniallyCreated from "../../../../../../src/contexts/core/genially/domain/events/GeniallyCreated";
+import DomainEventPublisher from "../../../../../../src/contexts/shared/domain/DomainEventPublisher";
 
 describe("CreateGeniallyService", () => {
     const saveFn = jest.fn();
@@ -13,8 +15,12 @@ describe("CreateGeniallyService", () => {
         find: jest.fn(),
         delete: jest.fn()
     } as GeniallyRepository;
+
+    const publishFn = jest.fn();
+    const publisher = { publish: publishFn } as DomainEventPublisher;
+
     const helper = new GeniallyTestHelper();
-    const service = new CreateGeniallyService(repository);
+    const service = new CreateGeniallyService(repository, publisher);
     const data = {
         id: new Uuid(),
         name: new GeniallyName("valid name"),
@@ -23,6 +29,7 @@ describe("CreateGeniallyService", () => {
 
     beforeEach(async () => {
         saveFn.mockClear();
+        publishFn.mockClear();
     });
 
     test("should create a valid genially with all fields", async () => {
@@ -36,7 +43,25 @@ describe("CreateGeniallyService", () => {
 
     });
 
-    test("should handle error from repository", async () => {
+    test('should publish event when genially is created', async () => {
+        // arrange
+
+        // act
+        const result = await service.execute(data);
+
+        // assert
+        expect(publishFn).toHaveBeenCalledTimes(1);
+        expect(publishFn).toHaveBeenCalledWith([
+            new GeniallyCreated({
+                id: result.id.value,
+                createdAt: result.createdAt.getTime()
+            })
+        ])
+    });
+
+
+
+    test("should handle error from repositorY", async () => {
         // arrange
         const error = "infrastructure error";
         saveFn.mockImplementation(() => {
@@ -46,5 +71,17 @@ describe("CreateGeniallyService", () => {
         // act & assert
         await expect(service.execute(data)).rejects.toThrow(error);
     });
-    
+
+
+    test('should not publish event when genially is not created', async () => {
+        // arrange
+        const error = "infrastructure error";
+        saveFn.mockImplementation(() => {
+            throw new Error(error);
+        });
+
+        // act & assert
+        expect(publishFn).toHaveBeenCalledTimes(0);
+    });
+
 });

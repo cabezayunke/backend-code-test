@@ -6,9 +6,10 @@ import DomainEvent from "../../contexts/shared/domain/DomainEvent";
 
 export default class AnalyticsOnGeniallyCreatedSubscriber implements DomainEventSubscriber {
 
-    constructor(private repository: GeniallyStatsRepository)
+    constructor(private repository: GeniallyStatsRepository) {}
 
     async consume(event: DomainEvent): Promise<void> {
+        console.debug(`Consuming event ${event.getName()} with data ${JSON.stringify(event.getContents(), null, 2)}`);
         const service = new IncreaseGeniallyCreatedStatsService(this.repository);
         // NOTE:
         // this is  simple case where we not need the event contents

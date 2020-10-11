@@ -30,7 +30,7 @@ export default class InMemorySyncDomainEventBus implements DomainEventBus {
             acc = [
                 ...acc,
                 ...this._subscribers.get(event.getName())
-                            .map(subscriber => subscriber.consume(event.getContents()))
+                            .map(subscriber => subscriber.consume(event))
             ];
             return acc;
         }, []);

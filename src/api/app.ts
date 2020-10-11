@@ -13,6 +13,7 @@ import {deleteGeniallyController} from "./controllers/deleteGeniallyController";
 import {renameGeniallyController} from "./controllers/renameGeniallyController";
 import AnalyticsOnGeniallyCreatedSubscriber from "./subscribers/AnalyticsOnGeniallyCreatedSubscriber";
 import GeniallyCreated from "../contexts/core/genially/domain/events/GeniallyCreated";
+import InMemoryGeniallyStatsRepository from "../contexts/analytics/genially/infrastructure/InMemoryGeniallyStatsRepository";
 
 // Create Express server
 const app = express();
@@ -32,7 +33,7 @@ app.get("/", healthController.check);
 // implement something to handle dependencies creation better
 // either our own or with a DI container or similar
 
-const statsRepository = new MongoGeniallyRepository();
+const statsRepository = new InMemoryGeniallyStatsRepository();
 const analyticsOnCreatedEventSubscriber = new AnalyticsOnGeniallyCreatedSubscriber(statsRepository);
 
 const eventBus = new InMemorySyncDomainEventBus();
@@ -42,7 +43,7 @@ const publisher = new InMemorySyncDomainEventPublisher(eventBus);
 const geniallyRepository = new MongoGeniallyRepository();
 
 app.post("/genially", createGeniallyController(geniallyRepository, publisher));
-app.delete("/genially", deleteGeniallyController(geniallyRepository));
-app.patch("/genially", renameGeniallyController(geniallyRepository));
+app.delete("/genially/:id", deleteGeniallyController(geniallyRepository));
+app.patch("/genially/:id", renameGeniallyController(geniallyRepository));
 
 export default app;

@@ -1,13 +1,11 @@
 import DomainEvent from "../../../../../src/contexts/shared/domain/DomainEvent";
 
+const NAME = "test.event.fake";
+
 export default class FakeDomainEvent extends DomainEvent {
 
     constructor(data?: any) {
-        super(data);
-    }
-
-    getName(): string {
-        return "test.event.fake";
+        super(NAME, data);
     }
 
 }

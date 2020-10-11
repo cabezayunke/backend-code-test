@@ -1,4 +1,5 @@
 import DbConnectionManager from "../../../../../src/contexts/shared/infrastructure/DbConnectionManager";
+import GeniallyModel from "../../../../../src/contexts/core/genially/infrastructure/GeniallyModel";
 
 export default class IntegrationTestHelper {
 
@@ -10,6 +11,7 @@ export default class IntegrationTestHelper {
     }
 
     async after() {
+        await GeniallyModel.deleteMany({});
         await this.connectionManager.disconnect();
     }
 

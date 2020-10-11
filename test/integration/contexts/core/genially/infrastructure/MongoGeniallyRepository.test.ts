@@ -7,7 +7,6 @@ import GeniallyName from "../../../../../../src/contexts/core/genially/domain/va
 import GeniallyDescription from "../../../../../../src/contexts/core/genially/domain/values/GeniallyDescription";
 import Genially from "../../../../../../src/contexts/core/genially/domain/Genially";
 import DbConfig from "../../../../../../src/contexts/shared/infrastructure/DbConfig";
-import GeniallyModel from "../../../../../../src/contexts/core/genially/infrastructure/GeniallyModel";
 
 describe("MongoGeniallyRepository", () => {
 
@@ -22,7 +21,6 @@ describe("MongoGeniallyRepository", () => {
     });
 
     afterAll(async () => {
-        await GeniallyModel.deleteMany({});
         await integrationTestHelper.after();
     });
 

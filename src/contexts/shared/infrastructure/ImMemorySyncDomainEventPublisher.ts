@@ -1,6 +1,6 @@
-import DomainEvent from "./DomainEvent";
 import DomainEventBus from "../domain/DomainEventBus";
 import DomainEventPublisher from "../domain/DomainEventPublisher";
+import DomainEvent from "../domain/DomainEvent";
 
 export default class InMemorySyncDomainEventPublisher implements DomainEventPublisher {
 

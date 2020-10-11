@@ -1,13 +1,12 @@
 
 export default abstract class DomainEvent {
 
-    data: any;
 
-    constructor(data?: any) {
-        this.data = data;
+    constructor(protected name: string, protected data?: any) {}
+
+    getName(): string {
+        return this.name;
     }
-
-    abstract getName(): string;
 
     getContents(): any {
         return this.data;
