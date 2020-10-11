@@ -1,4 +1,4 @@
-import { uuid, isUuid } from "uuidv4";
+import { v4 as uuid, validate as isUuid } from "uuid";
 import UuidInvalid from "./UuidInvalid";
 
 export default class Uuid {

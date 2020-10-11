@@ -13,7 +13,11 @@
     "test": "jest --forceExit --coverage --verbose",
     "watch-node": "nodemon dist/server.js",
     "watch-test": "npm run test -- --watchAll",
-    "watch-ts": "tsc -w"
+    "watch-ts": "tsc -w",
+    "env-test": "docker-compose -f ./deploy/local/docker-compose.test.yml up -d",
+    "test-unit": "jest test/unit/ --runInBand",
+    "test-integration": "jest test/integration/ --runInBand",
+    "test-acceptance": "jest test/acceptance/"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -22,7 +26,7 @@
     "express": "^4.17.1",
     "lusca": "^1.6.1",
     "mongoose": "^5.10.9",
-    "uuidv4": "^6.2.4"
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "@types/compression": "^1.7.0",
@@ -34,6 +38,7 @@
     "@types/mongoose": "^5.7.36",
     "@types/node": "^13.13.4",
     "@types/supertest": "^2.0.9",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
     "cross-env": "^7.0.2",
