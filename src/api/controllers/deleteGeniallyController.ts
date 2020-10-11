@@ -3,7 +3,7 @@ import GeniallyRepository from "../../contexts/core/genially/domain/GeniallyRepo
 import DeleteGeniallyService, {DeleteGeniallyServiceRequest} from "../../contexts/core/genially/application/DeleteGeniallyService";
 import Uuid from "../../contexts/shared/domain/Uuid";
 
-export const createGeniallyController = (repository: GeniallyRepository) => async (req: Request, res: Response) => {
+export const deleteGeniallyController = (repository: GeniallyRepository) => async (req: Request, res: Response) => {
     const service = new DeleteGeniallyService(repository);
     const { id } = req.params;
     await service.execute({

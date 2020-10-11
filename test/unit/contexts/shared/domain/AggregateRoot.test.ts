@@ -7,7 +7,7 @@ describe("AggregateRoot", () => {
     test("should add domain event", async () => {
         // arrange
         const aggregate = new FakeAggregate();
-        const fakeEvent = new FakeDomainEvent({});
+        const fakeEvent = new FakeDomainEvent();
 
         // act
         aggregate.registerEvent(fakeEvent);
@@ -35,7 +35,7 @@ describe("AggregateRoot", () => {
     test("should pull all domain events", async () => {
         // arrange
         const aggregate = new FakeAggregate();
-        const fakeEvent = new FakeDomainEvent({});
+        const fakeEvent = new FakeDomainEvent();
 
         // act
         aggregate.registerEvent(fakeEvent);
@@ -50,7 +50,7 @@ describe("AggregateRoot", () => {
     test("pulling events should reset aggregate domain events", async () => {
         // arrange
         const aggregate = new FakeAggregate();
-        const fakeEvent = new FakeDomainEvent({});
+        const fakeEvent = new FakeDomainEvent();
 
         // act
         aggregate.registerEvent(fakeEvent);

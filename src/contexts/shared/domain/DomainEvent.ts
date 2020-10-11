@@ -3,11 +3,11 @@ export default abstract class DomainEvent {
 
     data: any;
 
-    constructor(data: any) {
+    constructor(data?: any) {
         this.data = data;
     }
 
-    abstract getFullyQualifiedName(): string;
+    abstract getName(): string;
 
     getContents(): any {
         return this.data;
