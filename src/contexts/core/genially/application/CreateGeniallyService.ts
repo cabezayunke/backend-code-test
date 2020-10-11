@@ -1,10 +1,13 @@
 import Genially from "../domain/Genially";
+import Uuid from "../../../shared/domain/Uuid";
+import GeniallyName from "../domain/values/GeniallyName";
+import GeniallyDescription from "../domain/values/GeniallyDescription";
 import GeniallyRepository from "../domain/GeniallyRepository";
 
 type CreateGeniallyServiceRequest = {
-  id: string;
-  name: string;
-  description: string;
+  id: Uuid;
+  name: GeniallyName;
+  description: GeniallyDescription;
 };
 
 export default class CreateGeniallyService {
@@ -13,7 +16,8 @@ export default class CreateGeniallyService {
   public async execute(req: CreateGeniallyServiceRequest): Promise<Genially> {
     const { id, name, description } = req;
 
-    const genially = new Genially(id, name, description);
+    // constructor is now private, we have better control and better semantics with factory methods
+    const genially = Genially.create(id, name, description);
 
     await this.repository.save(genially);
 

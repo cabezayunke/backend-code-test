@@ -1,27 +1,34 @@
-export default class Genially {
-  private _id: string;
-  private _name: string;
-  private _description: string;
+import Uuid from "../../../shared/domain/Uuid";
+import GeniallyName from "./values/GeniallyName";
+import GeniallyDescription from "./values/GeniallyDescription";
+import GeniallyCreated from "./events/GeniallyCreated";
+import AggregateRoot from "../../../shared/domain/AggregateRoot";
+
+export default class Genially extends AggregateRoot {
+  private _id: Uuid;
+  private _name: GeniallyName;
+  private _description: GeniallyDescription;
   private _createdAt: Date;
   private _modifiedAt: Date;
   private _deletedAt: Date;
 
-  constructor(id: string, name: string, description?: string) {
+  private constructor(id: Uuid, name: GeniallyName, description: GeniallyDescription, createdAt: Date) {
+    super();
     this._id = id;
     this._name = name;
     this._description = description;
-    this._createdAt = new Date();
+    this._createdAt = createdAt;
   }
 
-  get id(): string {
+  get id(): Uuid {
     return this._id;
   }
 
-  get name(): string {
+  get name(): GeniallyName {
     return this._name;
   }
 
-  get description(): string {
+  get description(): GeniallyDescription {
     return this._description;
   }
 
@@ -35,5 +42,24 @@ export default class Genially {
 
   get deletedAt(): Date {
     return this._deletedAt;
+  }
+
+    /**
+     * Factory method to help us control the Genially creation
+     * For example, in this case, moving the date here rather than doing new Date() within the constructor
+     * will make it easier for us to create Geniallys in the past, if needed for testing
+     * @param {Uuid} id
+     * @param {GeniallyName} name
+     * @param {GeniallyDescription} description
+     */
+  static create(id: Uuid, name: GeniallyName, description: GeniallyDescription) {
+      const genially = new Genially(id, name, description, new Date());
+      genially.registerEvent(
+          new GeniallyCreated({
+              id: genially.id.value,
+              createdAt: genially.createdAt.getTime()
+          })
+      );
+      return genially;
   }
 }
